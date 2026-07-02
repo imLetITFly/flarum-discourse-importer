@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module FlarumImport
-  # Keeps importer progress output in one place.
+  # Keeps importer progress output in one place without changing existing text.
   class ImportLogger
     def users
       puts "", "creating users"

@@ -1,7 +1,11 @@
 # frozen_string_literal: true
 
+require_relative "../helpers/markdown_helper"
+
 module FlarumImport
   class PostsImporter
+    include MarkdownHelper
+
     def initialize(importer:, database:, statistics:, logger:, batch_size:)
       @importer = importer
       @database = database
@@ -51,11 +55,6 @@ module FlarumImport
       end
 
       mapped
-    end
-
-    # Retained as the single extension point for source post processing.
-    def process_flarum_post(raw, _import_id)
-      raw.dup
     end
   end
 end
