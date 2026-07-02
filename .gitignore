@@ -1,0 +1,13 @@
+*.log
+*.sqlite3
+
+.bundle/
+vendor/
+tmp/
+
+test_data/*.sql
+test_data/uploads/
+
+.DS_Store
+.idea/
+.vscode/
